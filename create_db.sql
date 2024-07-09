@@ -27,5 +27,9 @@ CREATE TABLE messages (
 );
 
 ALTER TABLE messages
+ADD COLUMN sender_email VARCHAR(255) NOT NULL AFTER receiver_id;
+
+
+ALTER TABLE messages
 ADD COLUMN receiver_email VARCHAR(255) NOT NULL AFTER sender_email;
 
